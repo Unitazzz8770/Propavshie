@@ -282,21 +282,11 @@ VAR kamera_zariadka = 0
 *[К бабушке!]
 ->begaem_po_gorodu.babushka
 
-+[В полицейский участок!]
+*[В полицейский участок!]
 {v_gorode_proshli == 3: ->begaem_po_gorodu.polis}
 
 {v_gorode_proshli != 3 and v_gorode_proshli != 4: Пойдем туда позже... Сейчас не время!}
 {v_gorode_proshli != 3 and v_gorode_proshli != 4: ->begaem_po_gorodu}
-
-{v_gorode_proshli == 4: Посмотри на время! Уже темнеет и нужно домой.!}
-{v_gorode_proshli == 4: ->begaem_po_gorodu}
-
-+[Пора домой!]
-{v_gorode_proshli == 4: Ты уже устала, наступил вечер и пора возвращаться.}
-{v_gorode_proshli == 4: ->noch2}
-
-{v_gorode_proshli != 4: Мне кажется, ты что-то упускаешь. Еще есть время!}
-{v_gorode_proshli != 4: ->begaem_po_gorodu}
 
 = polis
 #Location: idem
@@ -463,7 +453,12 @@ VAR kamera_zariadka = 0
 
 Дядя выбежал из кабинета, не закрыв даже дверь.
 Вы с Песиком посмотрели на друг друга. 
-->begaem_po_gorodu
+->begaem_po_gorodu2
+
+= begaem_po_gorodu2
+*[Пора домой!]
+Ты уже устала, наступил вечер и пора возвращаться.
+->noch2
 
 = babushka
 #Location: idem
@@ -1210,5 +1205,6 @@ VAR kamera_zariadka = 0
 Мужчина: Ладно так наверное все делают. #Н
 
 ->END
+
 
 
