@@ -283,10 +283,10 @@ VAR kamera_zariadka = 0
 ->begaem_po_gorodu.babushka
 
 +[В полицейский участок!]
-{v_gorode_proshli == 3: ->begaem_po_gorodu.polis}
+{v_gorode_proshli == 2: ->begaem_po_gorodu.polis}
 
-{v_gorode_proshli != 3 and v_gorode_proshli != 4: Пойдем туда позже... Сейчас не время!}
-{v_gorode_proshli != 3 and v_gorode_proshli != 4: ->begaem_po_gorodu}
+{v_gorode_proshli != 2: Пойдем туда позже... Сейчас не время!}
+{v_gorode_proshli != 2: ->begaem_po_gorodu}
 
 = polis
 #Location: idem
@@ -1205,6 +1205,7 @@ VAR kamera_zariadka = 0
 Мужчина: Ладно так наверное все делают. #Н
 
 ->END
+
 
 
 
