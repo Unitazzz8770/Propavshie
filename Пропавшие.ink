@@ -282,7 +282,7 @@ VAR kamera_zariadka = 0
 *[К бабушке!]
 ->begaem_po_gorodu.babushka
 
-*[В полицейский участок!]
++[В полицейский участок!]
 {v_gorode_proshli == 3: ->begaem_po_gorodu.polis}
 
 {v_gorode_proshli != 3 and v_gorode_proshli != 4: Пойдем туда позже... Сейчас не время!}
@@ -1205,6 +1205,7 @@ VAR kamera_zariadka = 0
 Мужчина: Ладно так наверное все делают. #Н
 
 ->END
+
 
 
 
